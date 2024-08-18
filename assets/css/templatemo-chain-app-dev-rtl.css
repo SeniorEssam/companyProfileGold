@@ -891,14 +891,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/slider-left-dec.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 250px 120px 150px 120px;
-  position: relative;
-  margin: 9px;
-  background-position:center right;
-  overflow: hidden;
+  background-image: url(../images/slider-left-dec-rtl.png);background-repeat: no-repeat;background-size: contain;padding: 250px 120px 150px 120px;position: relative;margin: 9px;background-position:center right;overflow: hidden;
 }
 
 /* .main-banner:before {
@@ -997,7 +990,7 @@ Services Style
 
 .services:after {
   content: '';
-  background-image: url(../images/services-left-dec.png);
+  background-image: url(../images/services-right-dec-rtl.png);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -1007,9 +1000,9 @@ Services Style
   z-index: 0;
 }
 
-.services:before {
+/* .services:before {
   content: '';
-  background-image: url(../images/services-right-dec.png);
+  background-image: url(../images/services-right-dec-rtl.png);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -1017,7 +1010,7 @@ Services Style
   width: 1136px;
   height: 244px;
   z-index: 0;
-}
+} */
 
 .services .section-heading {
   text-align: center;
@@ -1037,6 +1030,7 @@ Services Style
   border-radius: 10px;
   border-top-left-radius: 50px;
   transition: all .3s;
+  height: 313px;
 }
 
 .service-item .icon {
@@ -2248,4 +2242,37 @@ responsive
 }
 a{
   color: #b1813d;
+}
+.teammate__name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.service-item:before {
+  content: "";
+  position: absolute;
+  background: #000;
+  opacity: .4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20;
+}
+.our-vision .col-lg-8{
+  padding: 40px;
+    line-height: 2.7;
+}
+.block-map {
+  margin-bottom: 10px;
+}
+.block-map__body {
+  height: 540px;
+  position: relative;
+}
+.block-map__body iframe{
+  width: 100%;
+  height: 100%;
 }
