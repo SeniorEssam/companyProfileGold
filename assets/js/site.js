@@ -61,6 +61,17 @@ function owloptionold(elem) {
                         0: { items: 1 }
                     }
                 },
+                'horizontal_paner': {
+                    items: 7,
+                    responsive: {
+                        1200: { items: 7, margin: 14 },
+                        992: { items: 5, margin: 14 },
+                        768: { items: 3, margin: 14 },
+                        576: { items: 2 , margin: 14},
+                        475: { items: 2 ,margin: 14 },
+                        0: { items: 1 }
+                    }
+                },
             };
             const owl = $('.owl-carousel', this);
             let cancelPreviousTabChange = function () { };
@@ -90,6 +101,8 @@ function owloptionold(elem) {
         });
     });
 }
-owloptionold('teammates');
-owloptionold('services_slide');
-owloptionold('Projects_slide');
+owloptionold('about_slider');
+owloptionold('services_slider');
+owloptionold('mission_slider');
+owloptionold('partner_slider');
+owloptionold('clients_slider');
