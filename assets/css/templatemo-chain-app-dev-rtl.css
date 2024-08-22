@@ -33,6 +33,18 @@ font & reset css
 reset
 --------------------------------------------- 
 */
+:root {
+  --primary-color: rgb(16, 94, 108);; /* Define a root variable for primary color */
+  --secondary-color:rgb(94, 234, 251,1);
+  --selection-color:rgb(94, 234, 251,1);
+  --gradient-color:linear-gradient(
+    105deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  --before-color:rgb(34 64 69);
+  --light-color:#d3fcfa;
+}
 html,
 body,
 div,
@@ -214,12 +226,12 @@ body {
 }
 
 ::selection {
-  background: #d2af6d;
+  background: var(--selection-color);
   color: #fff !important;
 }
 
 ::-moz-selection {
-  background: #d2af6d;
+  background: var(--selection-color);;
   color: #fff !important;
 }
 
@@ -256,7 +268,7 @@ body {
 .section-heading h4 em,
 em {
   font-style: normal;
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 .section-heading img {
@@ -276,7 +288,7 @@ em {
 .white-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #b1813d !important;
+  color:var(--primary-color) !important;
   text-transform: capitalize;
   font-size: 15px;
   background-color: #fff;
@@ -292,7 +304,7 @@ em {
 }
 
 .white-button a:hover {
-  background-color: #b1813d;
+  background-color: var(--primary-color);
   color: #fff !important;
 }
 
@@ -316,12 +328,8 @@ em {
   color: #fff !important;
   text-transform: capitalize;
   font-size: 15px;
-  background: #f0b313;
-  background: linear-gradient(
-    105deg,
-    rgba(145, 86, 25, 1) 0%,
-    rgba(253, 233, 163, 1) 100%
-  );
+  background: var(--secondary-color);
+  background: var(--gradient-color);
   border-radius: 23px;
   font-weight: 500 !important;
   letter-spacing: 0.3px !important;
@@ -330,19 +338,15 @@ em {
 
 .gradient-button a:hover {
   color: #fff !important;
-  background: #f0b313;
-  background: linear-gradient(
-    105deg,
-    rgba(145, 86, 25, 1) 0%,
-    rgba(253, 233, 163, 1) 100%
-  );
+  background: var(--secondary-color);
+  background: var(--gradient-color);
 }
 
 .border-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #b1813d !important;
-  border: 1px solid #b1813d;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
   text-transform: capitalize;
   font-size: 15px;
   display: inline-block;
@@ -354,7 +358,7 @@ em {
 }
 
 .border-button a:hover {
-  background-color: #b1813d;
+  background-color: var(--primary-color);
   color: #fff !important;
 }
 
@@ -381,7 +385,7 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 .background-header .nav li a.active {
@@ -393,7 +397,7 @@ header
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #b1813d;
+  background-color: var(--primary-color);
   content: "";
   right: 50%;
   bottom: -20px;
@@ -504,7 +508,7 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #b1813d !important;
+  color: var(--primary-color) !important;
 }
 
 .header-area .main-nav .nav li:last-child a.active {
@@ -513,7 +517,7 @@ header
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #b1813d !important;
+  color: var(--primary-color) !important;
   opacity: 1;
 }
 
@@ -576,7 +580,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #b1813d !important;
+  color: var(--primary-color) !important;
   padding-right: 25px;
 }
 
@@ -716,7 +720,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 @media (max-width: 1200px) {
@@ -756,7 +760,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #b1813d !important;
+    color: var(--primary-color) !important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -818,7 +822,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #b1813d !important;
+    color: var(--primary-color) !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -933,7 +937,7 @@ preloader
   height: 16px;
   top: 12px;
   right: 15px;
-  background: #b1813d;
+  background: var(--primary-color);
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -956,7 +960,7 @@ preloader
   width: 16px;
   height: 16px;
   margin-right: 16px;
-  background: #b1813d;
+  background: var(--primary-color);
   border-radius: 50%;
 }
 
@@ -1044,11 +1048,7 @@ Banner Style
 }
 
 .main-banner .left-content .white-button a {
-  background: linear-gradient(
-    105deg,
-    rgba(145, 86, 25, 1) 0%,
-    rgba(253, 233, 163, 1) 100%
-  );
+  background: var(--gradient-color);
   color: #fff !important;
 }
 
@@ -1096,13 +1096,15 @@ Services Style
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -250px;
   width: 1136px;
   height: 244px;
   z-index: 0;
   opacity: 0.6;
 }
-
+.servicess:before{
+  display: none;
+}
 .services .section-heading,
 .mission .mission-heading {
   text-align: center;
@@ -1245,7 +1247,7 @@ About Us
 }
 
 .about-us .box-item:hover h4 a {
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 .about-us .gradient-button {
@@ -1339,7 +1341,7 @@ The Clients
 .the-clients .naccs .menu div.active i,
 .the-clients .naccs .menu div.active span.rating,
 .the-clients .naccs .menu div.active .thumb {
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 .the-clients ul.nacc {
@@ -1497,7 +1499,7 @@ The Clients
 }
 
 .pricing-item-regular ul li {
-  color: #b1813d;
+  color: var(--primary-color);
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -1574,7 +1576,7 @@ The Clients
 }
 
 .pricing-item-pro ul li {
-  color: #b1813d;
+  color: var(--primary-color);
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -1726,7 +1728,7 @@ footer #search button {
 
 footer #search button:hover {
   background-color: #fff;
-  color: #b1813d;
+  color: var(--primary-color);
 }
 
 .footer-widget .logo img {
@@ -1820,13 +1822,13 @@ PopUp
 
 .btn {
   padding: 10px 20px;
-  background: #b1813d;
+  background: var(--primary-color);
   color: #fff;
   transition: all 0.3s;
 }
 
 .btn_red {
-  background: #b1813d;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -1879,7 +1881,7 @@ a.btn_red {
   left: 0;
   top: 0;
   padding: 10px 15px;
-  background: #b1813d;
+  background: var(--primary-color);
   cursor: pointer;
   color: #fff;
   font-size: 16px;
@@ -1899,7 +1901,6 @@ a.btn_red {
 }
 
 .social_login .icon {
-  display: inline-block;
 
   padding: 5px 10px;
   margin-left: 10px;
@@ -1995,7 +1996,7 @@ a.btn_red {
   clear: both;
   overflow: hidden;
   text-decoration: none;
-  color: #b1813d;
+  color: var(--primary-color);
   transition: all 0.3s;
 }
 /* User Register Form */
@@ -2086,11 +2087,7 @@ responsive
     margin-left: 0;
   }
   .main-banner .left-content .white-button a {
-    background: linear-gradient(
-      105deg,
-      rgba(145, 86, 25, 1) 0%,
-      rgba(253, 233, 163, 1) 100%
-    );
+    background: var(--gradient-color);
     color: #fff !important;
   }
   form#contact {
@@ -2216,7 +2213,7 @@ responsive
   }
   footer #search button {
     background-color: #fff;
-    color: #b1813d;
+    color: var(--primary-color);
   }
   footer #search input::placeholder {
     color: #2a2a2a;
@@ -2328,10 +2325,10 @@ responsive
 }
 .fa-arrow-right,
 .fa-angle-right {
-  display: none;
+  display: none !important;
 }
 a {
-  color: #b1813d;
+  color: var(--primary-color);
 }
 .teammate__name {
   font-size: 18px;
@@ -2341,7 +2338,7 @@ a {
 }
 #about_slider .about__item {
   border-radius: 5%;
-  background-color: #f5efe3;
+  background-color: var(--light-color);
   overflow: hidden;
 }
 #about_slider .about__avatar {
@@ -2350,7 +2347,7 @@ a {
 .service-item:before {
   content: "";
   position: absolute;
-  background: #000;
+  background: var(--before-color);
   opacity: 0.6;
   top: 0;
   left: 0;
@@ -2362,7 +2359,7 @@ a {
 #about_slider .about__avatar:before {
   content: "";
   position: absolute;
-  background: #000;
+  background: var(--before-color);
   opacity: 0.4;
   top: 0;
   left: 0;

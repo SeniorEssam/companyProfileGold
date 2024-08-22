@@ -116,7 +116,7 @@ $(function() {
   });
 
   $(document).ready(function () {
-      $(document).on("scroll", onScroll);
+      //$(document).on("scroll", onScroll);
       
       //smoothscroll
       $('.scroll-to-section a[href^="#"]').on('click', function (e) {
@@ -135,7 +135,7 @@ $(function() {
               scrollTop: (target.offset().top) + 1
           }, 500, 'swing', function () {
               window.location.hash = target;
-              $(document).on("scroll", onScroll);
+             // $(document).on("scroll", onScroll);
           });
       });
   });
