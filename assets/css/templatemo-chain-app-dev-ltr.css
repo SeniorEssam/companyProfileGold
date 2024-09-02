@@ -404,10 +404,6 @@ header
   transform: translateX(-50%);
 }
 
-.background-header .nav li:last-child a.active:after {
-  background-color: transparent;
-}
-
 .header-area {
   background-color: transparent;
   border-bottom: 1px solid rgba(42, 42, 42, 0.2);
@@ -511,9 +507,6 @@ header
   color: var(--primary-color) !important;
 }
 
-.header-area .main-nav .nav li:last-child a.active {
-  color: #fff !important;
-}
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
@@ -1794,7 +1787,6 @@ PopUp
 }
 
 .btn {
-  padding: 10px 20px;
   background: var(--primary-color);
   color: #fff;
   transition: all 0.3s;
